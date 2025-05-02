@@ -1,0 +1,179 @@
+/* Arrière-plan personnalisable */
+#background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Vous pouvez définir ici une image en Base64 ou une couleur dégradée */
+  background: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style global */
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #f5f5f5;
+}
+
+/* En-tête */
+header {
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid #0056b3;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+header .slogan {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Navigation par onglets */
+nav {
+  background: #fff;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+nav .tabs {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+nav .tabs li {
+  padding: 15px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #007bff;
+  transition: background 0.3s;
+}
+nav .tabs li.active,
+nav .tabs li:hover {
+  background: #e6f7ff;
+}
+
+/* Contenu principal */
+#content {
+  padding: 20px;
+}
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* Blocs de contenu */
+.content-block {
+  margin: 20px auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+.content-block h3 {
+  margin-top: 0;
+  color: #0056b3;
+}
+
+/* Bouton toggle et boutons d'action */
+.toggle-button {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.toggle-button:hover {
+  background: #218838;
+}
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 0.9em;
+  transition: background 0.3s;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+/* Liste coulissante */
+.slide-list {
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  max-height: 500px;
+}
+.slide-list.hidden {
+  max-height: 0;
+}
+
+/* Listes et révisions */
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  padding: 8px 10px;
+  margin: 5px 0;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.revised-list li {
+  background: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+/* Styles pour les catégories (pour Médical et Biologie) */
+.category {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.category h4 {
+  margin: 10px 0 5px;
+  color: #333;
+  border-bottom: 1px dashed #aaa;
+  padding-bottom: 3px;
+  font-size: 1.1em;
+}
+.category ul {
+  margin-left: 20px;
+}
+
+/* Inputs et textarea */
+input[type="text"], textarea {
+  width: 80%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
